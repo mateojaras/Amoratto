@@ -1,0 +1,16 @@
+@use 'variables' as v;
+
+h1,h2,h3{
+    font-family: v.$fuentePrincipal ;
+    margin: 0 0 0 0;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.2;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+
+
