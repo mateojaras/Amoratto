@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Amoratto/static/css/main.7946f603.css",
+    "main.css": "/Amoratto/static/css/main.890b203e.css",
     "main.js": "/Amoratto/static/js/main.40ba8a05.js",
     "static/js/973.6ad1b935.chunk.js": "/Amoratto/static/js/973.6ad1b935.chunk.js",
     "static/js/559.9cd44a73.chunk.js": "/Amoratto/static/js/559.9cd44a73.chunk.js",
     "static/media/no_image.jpg": "/Amoratto/static/media/no_image.3f37e96d8d04d1e67452.jpg",
     "index.html": "/Amoratto/index.html",
-    "main.7946f603.css.map": "/Amoratto/static/css/main.7946f603.css.map",
+    "main.890b203e.css.map": "/Amoratto/static/css/main.890b203e.css.map",
     "main.40ba8a05.js.map": "/Amoratto/static/js/main.40ba8a05.js.map",
     "973.6ad1b935.chunk.js.map": "/Amoratto/static/js/973.6ad1b935.chunk.js.map",
     "559.9cd44a73.chunk.js.map": "/Amoratto/static/js/559.9cd44a73.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7946f603.css",
+    "static/css/main.890b203e.css",
     "static/js/main.40ba8a05.js"
   ]
 }
