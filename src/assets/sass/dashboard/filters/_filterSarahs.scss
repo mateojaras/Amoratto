@@ -65,8 +65,8 @@
 .container_category {
     position: relative;
     padding: 0px 0 0px 15px;
-    /* Damos un padding de 60px para posicionar el elemento <i> en este espacio*/
     display: block;
+    z-index: 0;
 
     select {
         appearance: none;
