@@ -1,3 +1,5 @@
+@use '../base/mixins' as m;
+
 .dashboard_container{
     width: 90%;
     max-width: 110rem;
@@ -7,10 +9,19 @@
 .dashboard_grid{
     display: grid;
     grid-template-columns: 2fr 5fr;
+    @include m.tablet { 
+        grid-template-columns: 1fr;
+        row-gap: 5rem;
+     }
 }
 
 .dashboard_products{
     border-left: .1rem solid #ededed;
+
+    @include m.tablet { 
+            grid-row: 1/2;
+            border-left:none;
+     }
 }
 
 .dashboard_container_products{
@@ -23,8 +34,11 @@
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
     gap: 2rem;
+    justify-content: center;
+
 }
 
 .dashboard_filter{
     padding-right: 3rem;
+    min-width: 20rem;
 }
