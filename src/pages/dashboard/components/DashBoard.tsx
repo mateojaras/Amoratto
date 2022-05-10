@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ProductService from "../../../services/apialegra/ProductService";
 import { CardSarahs } from "./cards/CardSarahs";
 import { FilterSarahs } from "./filters/FilterSarahs";
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 interface Product {
 	itemCategory: { name: string };
@@ -37,6 +38,17 @@ const DashBoard = () => {
 									image={product?.images ? product?.images[0]?.url : ""}
 								/>
 							))}
+						</div>
+						<div className="pages_container">
+							<a href="##">
+								<AiOutlineLeft />
+							</a>
+							<a href="##">1</a>
+							<a href="##">2</a>
+							<a href="##">3</a>
+							<a href="##">
+								<AiOutlineRight />
+							</a>
 						</div>
 					</div>
 				</div>
