@@ -1,25 +1,10 @@
-import { useEffect, useState } from "react";
-import ProductService from "../../../services/apialegra/ProductService";
 import { CardSarahs } from "./cards/CardSarahs";
 import { FilterSarahs } from "./filters/FilterSarahs";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
-
-interface Product {
-	itemCategory: { name: string };
-	name: string;
-	price: Array<{ price: string }>;
-	images: Array<{ url: string }>;
-}
+import { useDashboard } from "../hooks/useDashboard";
 
 const DashBoard = () => {
-	const [listProducts, setlistProducts] = useState<Array<Product>>();
-	useEffect(() => {
-		ProductService.getListOfProducts().then((response) => {
-			console.log(response);
-			setlistProducts(response.data);
-		});
-	}, []);
-
+	const { listProducts, pagination, changePagination } = useDashboard();
 	return (
 		<div className="dashboard_container">
 			<div className="dashboard_grid">
@@ -43,9 +28,12 @@ const DashBoard = () => {
 							<a href="##">
 								<AiOutlineLeft />
 							</a>
-							<a href="##">1</a>
-							<a href="##">2</a>
-							<a href="##">3</a>
+
+							{pagination.pages?.map((num) => (
+								<a key={num} href="##" onClick={() => changePagination(num)}>
+									{num + 1}
+								</a>
+							))}
 							<a href="##">
 								<AiOutlineRight />
 							</a>
