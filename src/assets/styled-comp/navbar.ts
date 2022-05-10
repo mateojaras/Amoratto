@@ -21,10 +21,13 @@ export const MobileIcon = styled.div`
 export const SubMenu = styled.div`
 	padding-bottom: 0.1rem;
 	border-top: 0.1rem solid #ededed;
+
+	width: 100%;
 	@media screen and (max-width: 960px) {
 		position: absolute;
 		top: 120px;
 		left: ${({ open }: openMenu) => (open ? "0" : "-100%")};
-		border-top: none;
+		border-top: 0.2rem solid #009288;
+		transition: 0.5s all ease;
 	}
 `;

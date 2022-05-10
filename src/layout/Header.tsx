@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { MobileIcon, SubMenu } from "../assets/styled-comp/navbar";
 
 export const Header = () => {
@@ -15,7 +15,7 @@ export const Header = () => {
 							alt="Logo"
 						/>
 						<MobileIcon onClick={() => setShowMenu(!showMenu)}>
-							<FaBars />
+							{showMenu ? <FaTimes /> : <FaBars />}
 						</MobileIcon>
 					</div>
 
