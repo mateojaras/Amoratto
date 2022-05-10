@@ -1,24 +1,24 @@
 import axios from "axios";
 
+const baseURL = process.env.REACT_APP_API_URL;
+const token = process.env.REACT_APP_TOKEN || "";
+
 let config = {
 	headers: {
-		Authorization:
-			"Basic bWF0ZW8uamFyYW1pbGxvcUB1ZGVhLmVkdS5jbzoxNjU4NmUyMTBiZWQ2MmRmNWI4NQ==",
+		Authorization: token,
 	},
 };
 class ProductService {
 	getListOfProducts(start: number) {
+		console.log(process.env.REACT_APP_API_URL);
 		return axios.get(
-			`https://api.alegra.com/api/v1/items/?start=${start}&limit=10&metadata=true`,
+			`${baseURL}items/?start=${start}&limit=10&metadata=true`,
 			config
 		);
 	}
 
 	getListOfCategories() {
-		return axios.get(
-			"https://api.alegra.com/api/v1/item-categories?start=0&limit=20",
-			config
-		);
+		return axios.get(`${baseURL}item-categories?start=0&limit=20`, config);
 	}
 }
 
