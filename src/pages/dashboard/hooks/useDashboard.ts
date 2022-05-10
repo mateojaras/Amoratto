@@ -28,22 +28,21 @@ export const useDashboard = () => {
 	const getListOfProducts = (start: number) => {
 		ProductService.getListOfProducts(start)
 			.then((response) => {
-				console.log(response);
 				setlistProducts(response?.data?.data);
 				setPagination({
 					start: start,
 					totalPages: response?.data?.metadata?.total / 10,
-					pages: buildPages(response?.data?.metadata?.total / 10),
+					pages: buildPages(response?.data?.metadata?.total / 10, start),
 				});
 			})
 			.catch((error) => console.log(error));
 	};
 
-	const buildPages = (total: number) => {
+	const buildPages = (total: number, start: number) => {
 		let newPages = [];
-		if (total > pagination.start / 10 + 3) {
-			for (var i = pagination.start / 10; i < pagination.start / 10 + 3; i++) {
-				console.log("i", i);
+		const startPage = start / 10;
+		if (total > startPage + 3) {
+			for (var i = startPage; i < startPage + 3; i++) {
 				newPages.push(i);
 			}
 		}
@@ -51,7 +50,6 @@ export const useDashboard = () => {
 	};
 
 	const changePagination = (num: number) => {
-		console.log("num", num);
 		getListOfProducts(num * 10);
 	};
 

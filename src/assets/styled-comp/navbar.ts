@@ -14,6 +14,8 @@ export const MobileIcon = styled.div`
 		svg {
 			fill: #009288;
 			margin-right: 0.5rem;
+			width: 2rem;
+			height: 2rem;
 		}
 	}
 `;
