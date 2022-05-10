@@ -10,7 +10,6 @@ let config = {
 };
 class ProductService {
 	getListOfProducts(start: number) {
-		console.log(process.env.REACT_APP_API_URL);
 		return axios.get(
 			`${baseURL}items/?start=${start}&limit=10&metadata=true`,
 			config

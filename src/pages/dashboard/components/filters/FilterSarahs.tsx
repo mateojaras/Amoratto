@@ -11,7 +11,6 @@ export const FilterSarahs = () => {
 	useEffect(() => {
 		ProductService.getListOfCategories().then((response) => {
 			setlistCategories(response.data);
-			console.log(response);
 		});
 	}, []);
 
