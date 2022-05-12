@@ -8,7 +8,7 @@ interface Product {
 	images: Array<{ url: string }>;
 }
 
-interface Pagination {
+export interface Pagination {
 	start: number;
 	totalPages: number;
 	pages: Array<number>;
@@ -16,6 +16,8 @@ interface Pagination {
 
 export const useDashboard = () => {
 	const [listProducts, setlistProducts] = useState<Array<Product>>();
+	const [loading, setLoading] = useState(true);
+	const [textFilter, setTextFilter] = useState<string>();
 	const [pagination, setPagination] = useState<Pagination>({
 		start: 0,
 		totalPages: 0,
@@ -23,11 +25,14 @@ export const useDashboard = () => {
 	});
 	useEffect(() => {
 		getListOfProducts(pagination.start);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
-	const getListOfProducts = (start: number) => {
-		ProductService.getListOfProducts(start)
+	const getListOfProducts = (start: number, text?: string) => {
+		setLoading(true);
+		ProductService.getListOfProducts(start, text ? text : "")
 			.then((response) => {
+				setLoading(false);
 				setlistProducts(response?.data?.data);
 				setPagination({
 					start: start,
@@ -53,5 +58,16 @@ export const useDashboard = () => {
 		getListOfProducts(num * 10);
 	};
 
-	return { listProducts, pagination, changePagination };
+	const searchByText = () => {
+		getListOfProducts(pagination.start, textFilter);
+	};
+
+	return {
+		listProducts,
+		pagination,
+		loading,
+		changePagination,
+		setTextFilter,
+		searchByText,
+	};
 };

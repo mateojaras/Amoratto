@@ -6,7 +6,7 @@ interface Category {
 	name: string;
 }
 
-export const FilterSarahs = () => {
+export const FilterSarahs = ({ setTextFilter, searchByText }: any) => {
 	const [listCategories, setlistCategories] = useState<Array<Category>>();
 	useEffect(() => {
 		ProductService.getListOfCategories().then((response) => {
@@ -21,8 +21,11 @@ export const FilterSarahs = () => {
 				className="search_products"
 				type="text"
 				placeholder="Buscar Producto..."
+				onChange={(e) => setTextFilter(e.target.value)}
 			/>
-			<button className="button"> Buscar </button>
+			<button className="button" onClick={searchByText}>
+				Buscar
+			</button>
 			<div className="categories_grid">
 				<span className="name_Category">Categorias</span>
 				{listCategories?.map((category) => (

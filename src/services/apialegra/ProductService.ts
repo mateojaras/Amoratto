@@ -9,9 +9,9 @@ let config = {
 	},
 };
 class ProductService {
-	getListOfProducts(start: number) {
+	getListOfProducts(start: number, text?: string) {
 		return axios.get(
-			`${baseURL}items/?start=${start}&limit=10&metadata=true`,
+			`${baseURL}items/?start=${start}&limit=10&metadata=true&query=${text}`,
 			config
 		);
 	}
