@@ -6,7 +6,11 @@ interface Category {
 	name: string;
 }
 
-export const FilterSarahs = ({ setTextFilter, searchByText }: any) => {
+export const FilterSarahs = ({
+	setTextFilter,
+	searchByText,
+	searchByCategory,
+}: any) => {
 	const [listCategories, setlistCategories] = useState<Array<Category>>();
 	useEffect(() => {
 		ProductService.getListOfCategories().then((response) => {
@@ -14,7 +18,7 @@ export const FilterSarahs = ({ setTextFilter, searchByText }: any) => {
 		});
 	}, []);
 
-	const [check, setCheck] = useState(false);
+	const [checkId, setCheckId] = useState<string>();
 	return (
 		<div className="filter_grid">
 			<input
@@ -32,8 +36,11 @@ export const FilterSarahs = ({ setTextFilter, searchByText }: any) => {
 					<label className="container_category" key={category.id}>
 						<input
 							type="radio"
-							checked={check}
-							onClick={() => setCheck(!check)}
+							checked={checkId === category.id ? true : false}
+							onClick={() => {
+								setCheckId(category.id);
+								searchByCategory(category.id);
+							}}
 							onChange={() => undefined}
 						/>
 						<i></i>

@@ -13,6 +13,7 @@ const DashBoard = () => {
 		changePagination,
 		setTextFilter,
 		searchByText,
+		searchByCategory,
 	} = useDashboard();
 	return (
 		<div className="dashboard_container">
@@ -21,6 +22,7 @@ const DashBoard = () => {
 					<FilterSarahs
 						setTextFilter={setTextFilter}
 						searchByText={searchByText}
+						searchByCategory={searchByCategory}
 					/>
 				</div>
 				<div className="dashboard_products">

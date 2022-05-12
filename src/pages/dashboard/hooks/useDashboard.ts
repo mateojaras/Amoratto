@@ -1,3 +1,4 @@
+import { text } from "node:stream/consumers";
 import { useEffect, useState } from "react";
 import ProductService from "../../../services/apialegra/ProductService";
 
@@ -18,6 +19,7 @@ export const useDashboard = () => {
 	const [listProducts, setlistProducts] = useState<Array<Product>>();
 	const [loading, setLoading] = useState(true);
 	const [textFilter, setTextFilter] = useState<string>();
+	const [categoryFilter, setCategoryFilter] = useState<string>();
 	const [pagination, setPagination] = useState<Pagination>({
 		start: 0,
 		totalPages: 0,
@@ -28,9 +30,17 @@ export const useDashboard = () => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
-	const getListOfProducts = (start: number, text?: string) => {
+	const getListOfProducts = (
+		start: number,
+		text?: string,
+		categoryId?: string
+	) => {
 		setLoading(true);
-		ProductService.getListOfProducts(start, text ? text : "")
+		ProductService.getListOfProducts(
+			start,
+			text ? text : "",
+			categoryId ? categoryId : ""
+		)
 			.then((response) => {
 				setLoading(false);
 				setlistProducts(response?.data?.data);
@@ -55,11 +65,16 @@ export const useDashboard = () => {
 	};
 
 	const changePagination = (num: number) => {
-		getListOfProducts(num * 10);
+		getListOfProducts(num * 10, textFilter, categoryFilter);
 	};
 
 	const searchByText = () => {
-		getListOfProducts(pagination.start, textFilter);
+		getListOfProducts(pagination.start, textFilter, categoryFilter);
+	};
+
+	const searchByCategory = (categoryId: string) => {
+		getListOfProducts(pagination.start, textFilter, categoryId);
+		setCategoryFilter(categoryId);
 	};
 
 	return {
@@ -69,5 +84,6 @@ export const useDashboard = () => {
 		changePagination,
 		setTextFilter,
 		searchByText,
+		searchByCategory,
 	};
 };
