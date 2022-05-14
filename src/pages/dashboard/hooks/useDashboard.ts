@@ -16,7 +16,7 @@ export interface Pagination {
 }
 
 export const useDashboard = () => {
-	const [listProducts, setlistProducts] = useState<Array<Product>>();
+	const [listProducts, setListProducts] = useState<Array<Product>>();
 	const [loading, setLoading] = useState(true);
 	const [textFilter, setTextFilter] = useState<string>();
 	const [categoryFilter, setCategoryFilter] = useState<string>();
@@ -43,7 +43,7 @@ export const useDashboard = () => {
 		)
 			.then((response) => {
 				setLoading(false);
-				setlistProducts(response?.data?.data);
+				setListProducts(response?.data?.data);
 				setPagination({
 					start: start,
 					totalPages: response?.data?.metadata?.total / 10,

@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 import { FaBars, FaTimes } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 import { MobileIcon, SubMenu } from "../assets/styled-comp/navbar";
+import { routes } from "../routes/routes";
 
 export const Header = () => {
 	const [showMenu, setShowMenu] = useState(false);
@@ -21,9 +23,9 @@ export const Header = () => {
 
 					<SubMenu className="container" open={showMenu}>
 						<nav className="nav">
-							<a href="##">productos</a>
-							<a href="##">Nosotros</a>
-							<a href="##">Home</a>
+							{routes.map((item) => {
+								return <NavLink to={item.to}>{item.name}</NavLink>;
+							})}
 						</nav>
 					</SubMenu>
 				</div>
