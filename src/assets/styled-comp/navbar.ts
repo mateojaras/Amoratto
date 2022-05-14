@@ -23,8 +23,8 @@ export const MobileIcon = styled.div`
 export const SubMenu = styled.div`
 	padding-bottom: 0.1rem;
 	border-top: 0.1rem solid #ededed;
-
 	width: 100%;
+	background-color: white;
 	@media screen and (max-width: 960px) {
 		position: absolute;
 		top: 120px;
