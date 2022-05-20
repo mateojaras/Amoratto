@@ -1,4 +1,3 @@
-import { text } from "node:stream/consumers";
 import { useEffect, useState } from "react";
 import ProductService from "../../../services/apialegra/ProductService";
 
