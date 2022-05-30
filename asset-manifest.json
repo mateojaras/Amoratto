@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Amoratto/static/css/main.b97c697f.css",
-    "main.js": "/Amoratto/static/js/main.f80afc79.js",
-    "static/js/405.42c36f51.chunk.js": "/Amoratto/static/js/405.42c36f51.chunk.js",
-    "static/js/29.347debcf.chunk.js": "/Amoratto/static/js/29.347debcf.chunk.js",
+    "main.css": "/Amoratto/static/css/main.552d42da.css",
+    "main.js": "/Amoratto/static/js/main.a59d46d8.js",
+    "static/js/929.6b4cee43.chunk.js": "/Amoratto/static/js/929.6b4cee43.chunk.js",
+    "static/js/221.d69f4144.chunk.js": "/Amoratto/static/js/221.d69f4144.chunk.js",
     "static/js/394.82dd8ca8.chunk.js": "/Amoratto/static/js/394.82dd8ca8.chunk.js",
     "static/js/362.03ab2275.chunk.js": "/Amoratto/static/js/362.03ab2275.chunk.js",
     "static/media/no_image.jpg": "/Amoratto/static/media/no_image.3f37e96d8d04d1e67452.jpg",
     "index.html": "/Amoratto/index.html",
-    "main.b97c697f.css.map": "/Amoratto/static/css/main.b97c697f.css.map",
-    "main.f80afc79.js.map": "/Amoratto/static/js/main.f80afc79.js.map",
-    "405.42c36f51.chunk.js.map": "/Amoratto/static/js/405.42c36f51.chunk.js.map",
-    "29.347debcf.chunk.js.map": "/Amoratto/static/js/29.347debcf.chunk.js.map",
+    "main.552d42da.css.map": "/Amoratto/static/css/main.552d42da.css.map",
+    "main.a59d46d8.js.map": "/Amoratto/static/js/main.a59d46d8.js.map",
+    "929.6b4cee43.chunk.js.map": "/Amoratto/static/js/929.6b4cee43.chunk.js.map",
+    "221.d69f4144.chunk.js.map": "/Amoratto/static/js/221.d69f4144.chunk.js.map",
     "394.82dd8ca8.chunk.js.map": "/Amoratto/static/js/394.82dd8ca8.chunk.js.map",
     "362.03ab2275.chunk.js.map": "/Amoratto/static/js/362.03ab2275.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b97c697f.css",
-    "static/js/main.f80afc79.js"
+    "static/css/main.552d42da.css",
+    "static/js/main.a59d46d8.js"
   ]
 }
