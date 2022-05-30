@@ -24,11 +24,6 @@ export const CardSarahs = ({ categories, name, price, image = "" }: Props) => {
 					<div className="name_product">
 						<h2>{name}</h2>
 					</div>
-
-					{/*Este precio se podra colocar mas adelante
-					 <div className="price">
-						<h3>{`$ ${price}`}</h3>
-					</div> */}
 					<div className="btn"></div>
 				</div>
 			</div>

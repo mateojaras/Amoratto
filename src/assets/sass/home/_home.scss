@@ -143,6 +143,7 @@
     max-width: 100rem;
     width: 90%;
     margin: 0 auto;
+    margin-bottom: 10rem;
 
     .resume_information_grid{
         display: grid;
@@ -296,4 +297,35 @@
 
     }
     
+}
+
+
+.container_slide{
+    max-width: 95%;
+    //width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    overflow: hidden;
+    @include m.tablet { 
+        grid-template-columns: 1fr;
+     }
+
+    .slider{
+        overflow: hidden;
+    }
+}
+
+.container-slider-grid{
+    display: grid;
+  column-gap: 2.3rem;
+  padding-right: 4rem;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  grid-template-rows: 1fr;
+  @include m.tablet { 
+    grid-template-columns: repeat(8, 1fr);
+
+    
+    
+ }
 }
