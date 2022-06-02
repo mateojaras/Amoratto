@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Footer from "../layout/Footer";
 import { Header } from "../layout/Header";
 import { routes } from "./routes";
 
@@ -21,6 +22,7 @@ export const Navigation = () => {
 					})}
 					<Route path="/*" element={<Navigate to={routes[0].to} replace />} />
 				</Routes>
+				{/* <Footer /> */}
 			</BrowserRouter>
 		</Suspense>
 	);

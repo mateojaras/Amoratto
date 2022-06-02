@@ -1,4 +1,5 @@
 @use '../base/mixins' as m;
+@use '../base/variables' as v;
 
 .background_primary_container{
     background-image: url(https://sarahssnacks.com/wp-content/uploads/2017/10/teal-blue-pattern-01.png);
@@ -114,6 +115,7 @@
 }
 
 .btn_toProducts{
+    
     background-color: #4e3629;
     color: #ffffff;
     padding: 1.2rem;
@@ -123,6 +125,10 @@
     display: flex;
     gap: 0.5rem;
     transition: all 0.5s;
+    &_green{
+        background-color: v.$primary;
+        padding: 1.5rem;
+    }
     svg {
         padding: auto;
         width: 1.2rem;
@@ -131,6 +137,8 @@
     &:hover{
         background-color: #814028;
     }
+
+    
   
 }
 
@@ -144,6 +152,9 @@
     width: 90%;
     margin: 0 auto;
     margin-bottom: 10rem;
+    @include m.phone { 
+        margin-bottom: 5rem;
+     }
 
     .resume_information_grid{
         display: grid;
@@ -328,4 +339,115 @@
     
     
  }
+}
+
+.favorites_flex{
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 0 3rem;
+    @include m.phone { 
+        grid-row: 1/2;
+        margin-bottom: 5rem;
+        height: 33rem;
+        // padding-left: 0;
+        }
+
+    .text_favorite{
+        font-size: 4rem;
+        color: v.$primary;
+        text-transform: uppercase;
+        font-weight: 300;
+        @include m.phone { 
+            font-size: 3rem;
+            }
+        span{
+            font-weight: 900;
+            display: block;
+            
+        }
+    }
+
+    .information_favorite{
+        font-weight: 300;
+        line-height: 2.7rem;
+        font-size: 1.9rem;
+        @include m.phone { 
+            font-size: 1.6rem;
+            }
+    }
+}
+
+//---------------frase------------------------------------//
+
+.phrase{
+    margin: 5rem 0;
+    background-image: url(https://sarahssnacks.com/wp-content/uploads/2019/11/testimonial-background.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    @include m.phone { 
+        background-attachment: scroll;
+        }
+}
+
+.phrase_opacity{
+    position: absolute;
+    background-color: #000000;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+ 
+}
+
+.phrase_grid{
+    padding: 15rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    min-height: 52rem;
+
+    
+    svg{
+        height: 5rem;
+        width: 5rem;
+        fill: v.$primary;
+        
+    }
+
+    .phrase_text{
+        width: 40%;
+        text-align: center;
+        @include m.phone { 
+            width: 80%;
+            }
+        span{
+
+        width: 40%;
+        font-size: 4rem;
+        color: #ffffff;
+        background: #333;
+        text-transform: uppercase;
+        @include m.phone { 
+            background: none;
+            font-size: 3rem;
+            }
+        
+        span{
+            margin: 0 auto;
+            font-weight: 700;
+            display: block;
+            background: #333;
+            @include m.phone { 
+                background: none;
+                }
+        }
+        }
+    }
 }
