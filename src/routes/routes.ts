@@ -15,6 +15,8 @@ const DashBoardComponent = lazy(
 
 const HomeComponent = lazy(() => import("../pages/home/components/Home"));
 
+const About = lazy(() => import("../pages/about/components/About"));
+
 export const routes: Route[] = [
 	{
 		to: "/Amoratto/",
@@ -27,5 +29,11 @@ export const routes: Route[] = [
 		path: "/Amoratto/Products",
 		Component: DashBoardComponent,
 		name: "productos",
+	},
+	{
+		to: "/Amoratto/About-us",
+		path: "/Amoratto/About-us",
+		Component: About,
+		name: "Nosotros",
 	},
 ];
