@@ -167,6 +167,10 @@
             display: block;
             font-weight: 700;
            text-align: left;
+           @include m.phone { 
+            text-align: center;
+         }
+           
           
       
         }
