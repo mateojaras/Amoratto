@@ -8,6 +8,9 @@
     background-size:cover;
     position: relative;
     min-height: 40rem;
+    @include m.phone { 
+        height: 22rem;
+     }
 }
 
 .about_opacity{
@@ -28,12 +31,19 @@
     align-items: center;
     text-align: center;
     margin: 0 auto;
+    @include m.phone { 
+        padding: 9 0 4rem 0;
+     }
     span{
         width: 60%;
         font-size: 7rem;
         color: white;
         font-weight: 700;
         text-transform: uppercase;
+        text-align: center;
+        @include m.phone { 
+            width: 90%;
+         }
     }
 
     h3{
@@ -41,6 +51,9 @@
         font-size: 2.5rem;
         color: white;
         font-weight: 300;
+        @include m.phone { 
+            width: 90%;
+         }
     }
 }
 
