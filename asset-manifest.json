@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Amoratto/static/css/main.da3f9176.css",
+    "main.css": "/Amoratto/static/css/main.6daf9dfe.css",
     "main.js": "/Amoratto/static/js/main.f259f7ce.js",
     "static/js/929.6b4cee43.chunk.js": "/Amoratto/static/js/929.6b4cee43.chunk.js",
     "static/js/221.3f9f4ae0.chunk.js": "/Amoratto/static/js/221.3f9f4ae0.chunk.js",
@@ -10,7 +10,7 @@
     "static/media/TatoP.png": "/Amoratto/static/media/TatoP.984e1c9f9448b5b22c13.png",
     "static/media/no_image.jpg": "/Amoratto/static/media/no_image.3f37e96d8d04d1e67452.jpg",
     "index.html": "/Amoratto/index.html",
-    "main.da3f9176.css.map": "/Amoratto/static/css/main.da3f9176.css.map",
+    "main.6daf9dfe.css.map": "/Amoratto/static/css/main.6daf9dfe.css.map",
     "main.f259f7ce.js.map": "/Amoratto/static/js/main.f259f7ce.js.map",
     "929.6b4cee43.chunk.js.map": "/Amoratto/static/js/929.6b4cee43.chunk.js.map",
     "221.3f9f4ae0.chunk.js.map": "/Amoratto/static/js/221.3f9f4ae0.chunk.js.map",
@@ -19,7 +19,7 @@
     "828.fdae3662.chunk.js.map": "/Amoratto/static/js/828.fdae3662.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.da3f9176.css",
+    "static/css/main.6daf9dfe.css",
     "static/js/main.f259f7ce.js"
   ]
 }
