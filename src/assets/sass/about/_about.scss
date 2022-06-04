@@ -58,11 +58,17 @@
     display: grid;
     grid-template-columns: 2fr 3fr;
     column-gap: 10rem;
+    @include m.phone { 
+        grid-template-columns: 1fr;
+     }
 }
 
 .about_history_photo_container{
     margin: 8rem 0 0 0;
     height: 48rem;
+    @include m.phone { 
+        margin: 2rem 0 0 0;
+        }
 }
 
 
@@ -100,11 +106,17 @@
         }
 
 .about_history_text{
+    
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: center;
     gap: 2rem;
+    @include m.phone { 
+        grid-row: 1/2;
+        height: 55rem;
+        padding-left: 0;
+        }
 }
 
 .about_history_text_photo{
