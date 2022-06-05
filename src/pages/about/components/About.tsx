@@ -15,8 +15,13 @@ const About = () => {
 				<div className="about_history_grid">
 					<div className="about_history_photo_container">
 						<div className="about_history_photo">
-							<div className="photo_owner">
-								<img src={require("../../../assets/img/TatoP.png")} alt="" />
+							<div className="about_photo_owner_flex">
+								<div className="photo_owner">
+									<img src={require("../../../assets/img/TatoP.png")} alt="" />
+								</div>
+								<div className="name_owner">
+									TATIANA CARDONA, <span>FUNDADORA, AMORATTO</span>
+								</div>
 							</div>
 						</div>
 					</div>
