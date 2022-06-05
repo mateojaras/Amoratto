@@ -1,5 +1,5 @@
-import { url } from "inspector";
-import React, { Fragment } from "react";
+import { Fragment } from "react";
+import { Information } from "../../../components/Information";
 
 const About = () => {
 	return (
@@ -11,41 +11,20 @@ const About = () => {
 					<h3>Como llegamos a ayudarte a tener el mejor detalle</h3>
 				</div>
 			</section>
-			<section className="about_history">
-				<div className="about_history_grid">
-					<div className="about_history_photo_container">
-						<div className="about_history_photo">
-							<div className="about_photo_owner_flex">
-								<div className="photo_owner">
-									<img src={require("../../../assets/img/TatoP.png")} alt="" />
-								</div>
-								<div className="name_owner">
-									TATIANA CARDONA, <span>FUNDADORA, AMORATTO</span>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div className="about_history_text">
-						<div className="about_history_text_photo" />
-						<div className="about_history_text_information">
-							<h2>
-								{" "}
-								MI NOMBRE ES TATIANA CARDONA,{" "}
-								<span> FUNDADORA DE AMORATTO</span>
-							</h2>
-							<p>
-								Hi, my name is Gayle Lanphier, owner and co-founder of Nuts
-								About Granola, LLC (now called Sarah’s Sweet Savory Snacks!). My
-								mission as a dietitian is to establish the best eating plan
-								possible to help individuals achieve their health and fitness
-								goals. I focus on REAL FOOD and how to best utilize it for
-								weight management, sports performance and healthy living.
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
+			<Information
+				mainPhoto={
+					"https://sarahssnacks.com/wp-content/uploads/2019/10/dot-bg.png"
+				}
+				secondPhoto={
+					"https://sarahssnacks.com/wp-content/uploads/2019/10/53160191_10157057061979469_7682333536212221952_o.jpg"
+				}
+				owner={true}
+				textWeightSlim={"MI NOMBRE ES TATIANA CARDONA,"}
+				textWeightThick={"FUNDADORA DE AMORATTO"}
+				phrase={
+					"Hi, my name is Gayle Lanphier, owner and co-founder of Nuts About Granola, LLC (now called Sarah’s Sweet Savory Snacks!). My mission as a dietitian is to establish the best eating plan possible to help individuals achieve their health and fitness goals. I focus on REAL FOOD and how to best utilize it for weight management, sports performance and healthy living."
+				}
+			/>
 		</Fragment>
 	);
 };

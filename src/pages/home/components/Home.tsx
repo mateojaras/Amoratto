@@ -5,6 +5,7 @@ import { ImQuotesRight } from "react-icons/im";
 
 import { Fragment } from "react";
 import Slideshow from "./Slideshow";
+import { Information } from "../../../components/Information";
 
 const Home = () => {
 	return (
@@ -25,49 +26,20 @@ const Home = () => {
 					</div>
 				</div>
 			</section>
-			<section className="resume_information">
-				<div className="resume_information_grid">
-					<div className="stationery">
-						<div className="stationery_img"></div>
-					</div>
-					<div className="party">
-						<div className="party_img_container">
-							<div className="party_img"></div>
-						</div>
-
-						<div className="party_stationey_information">
-							<h2>
-								TODO LO NECESARIO PARA <span>FIESTAS Y OFICINA!</span>
-							</h2>
-							<p>
-								En nuestra seccion de papeleria podras encontrar todo lo
-								necesario e indispesable para oficina, colegio o hogar, en
-								nuestra seccion de piñateria podras encontrar tematicas
-								exclusivas para tus fiestas y detalles unicos para regalar, te
-								ofrecemos VARIEDAD.
-							</p>
-							<div className="icons_container">
-								<NavLink to={"/Amoratto/Products"}>
-									<div className="party_icon_redirect">
-										<div className="icon_circle">
-											<BsBrush />
-										</div>
-										<h3>Piñateria</h3>
-									</div>
-								</NavLink>
-								<NavLink to={"/Amoratto/Products"}>
-									<div className="party_icon_redirect">
-										<div className="icon_circle">
-											<BsBook />
-										</div>
-										<h3>Papeleria</h3>
-									</div>
-								</NavLink>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+			<Information
+				mainPhoto={
+					"https://sarahssnacks.com/wp-content/uploads/2019/12/iStock-1088608090.jpg"
+				}
+				secondPhoto={
+					"https://sarahssnacks.com/wp-content/uploads/2019/11/testimonial-background.jpg"
+				}
+				textWeightSlim={"TODO LO NECESARIO PARA"}
+				textWeightThick={"FIESTAS Y OFICINA!"}
+				phrase={
+					"En nuestra seccion de papeleria podras encontrar todo lo necesario e indispesable para oficina, colegio o hogar, en nuestra seccion de piñateria podras encontrar tematicas exclusivas para tus fiestas y detalles unicos para regalar, te ofrecemos VARIEDAD."
+				}
+				iconOptions={true}
+			/>
 			<section className="container_slide">
 				<div className="slider">
 					<Slideshow />
