@@ -17,6 +17,8 @@ const HomeComponent = lazy(() => import("../pages/home/components/Home"));
 
 const About = lazy(() => import("../pages/about/components/About"));
 
+const Hamper = lazy(() => import("../pages/hamper/components/Hamper"));
+
 export const routes: Route[] = [
 	{
 		to: "/Amoratto/",
@@ -35,5 +37,11 @@ export const routes: Route[] = [
 		path: "/Amoratto/About-us",
 		Component: About,
 		name: "Nosotros",
+	},
+	{
+		to: "/Amoratto/Hamper",
+		path: "/Amoratto/Hamper",
+		Component: Hamper,
+		name: "Anchetas",
 	},
 ];

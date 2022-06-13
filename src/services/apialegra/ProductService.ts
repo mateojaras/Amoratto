@@ -11,13 +11,16 @@ let config = {
 class ProductService {
 	getListOfProducts(start: number, text?: string, categoryId?: string) {
 		return axios.get(
-			`${baseURL}items/?start=${start}&limit=10&metadata=true&query=${text}&idItemCategory=${categoryId}`,
+			`${baseURL}items/?start=${start}&limit=10&metadata=true&query=${text}&idItemCategory=${categoryId}&inventariable=true`,
 			config
 		);
 	}
 
 	getListOfCategories() {
-		return axios.get(`${baseURL}item-categories?start=0&limit=20`, config);
+		return axios.get(
+			`${baseURL}item-categories?start=0&limit=20&inventariable=true`,
+			config
+		);
 	}
 }
 

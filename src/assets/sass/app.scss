@@ -1,7 +1,8 @@
 @use 'dashboard';
 @use 'base';
 @use 'header';
-@use 'home';
+@use './pages/home';
 @use 'footer';
-@use 'about';
+@use './pages/about';
 @use 'components';
+@use './pages/hamper';
