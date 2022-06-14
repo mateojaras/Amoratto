@@ -17,7 +17,6 @@ export interface Pagination {
 export const buildPages = (total: number, start: number) => {
 	let newPages = [];
 	const startPage = start / 10;
-
 	if (total > startPage + 3) {
 		for (var i = startPage; i < startPage + 3; i++) {
 			newPages.push(i);
@@ -27,6 +26,10 @@ export const buildPages = (total: number, start: number) => {
 	} else if (total === 2) {
 		newPages.push(0);
 		newPages.push(1);
+	} else if (total === 3) {
+		newPages.push(0);
+		newPages.push(1);
+		newPages.push(2);
 	}
 	return newPages;
 };

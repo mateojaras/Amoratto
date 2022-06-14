@@ -23,11 +23,15 @@ export const PaginationSarahs = ({
 					{num + 1}
 				</a>
 			))}
-			{pagination.pages[2] && pagination.pages[2] !== pagination.totalPages && (
-				<a href="##" onClick={() => changePagination(pagination.pages[0] + 1)}>
-					<AiOutlineRight />
-				</a>
-			)}
+			{pagination.totalPages > 3 &&
+				pagination.pages[2] !== pagination.totalPages && (
+					<a
+						href="##"
+						onClick={() => changePagination(pagination.pages[0] + 1)}
+					>
+						<AiOutlineRight />
+					</a>
+				)}
 		</div>
 	);
 };
