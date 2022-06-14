@@ -1,4 +1,3 @@
-import React from "react";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { Pagination as Props } from "../../hooks/useDashboard";
 
@@ -24,7 +23,7 @@ export const PaginationSarahs = ({
 					{num + 1}
 				</a>
 			))}
-			{pagination.pages[3] !== pagination.totalPages && (
+			{pagination.pages[2] && pagination.pages[2] !== pagination.totalPages && (
 				<a href="##" onClick={() => changePagination(pagination.pages[0] + 1)}>
 					<AiOutlineRight />
 				</a>

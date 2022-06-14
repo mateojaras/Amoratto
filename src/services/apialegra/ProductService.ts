@@ -11,7 +11,7 @@ let config = {
 class ProductService {
 	getListOfProducts(start: number, text?: string, categoryId?: string) {
 		return axios.get(
-			`${baseURL}items/?start=${start}&limit=10&metadata=true&query=${text}&idItemCategory=${categoryId}&inventariable=true`,
+			`${baseURL}items/?start=${start}&limit=12&metadata=true&query=${text}&idItemCategory=${categoryId}&inventariable=true`,
 			config
 		);
 	}

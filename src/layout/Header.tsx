@@ -23,8 +23,12 @@ export const Header = () => {
 
 					<SubMenu className="container" open={showMenu}>
 						<nav className="nav">
-							{routes.map((item) => {
-								return <NavLink to={item.to}>{item.name}</NavLink>;
+							{routes.map((item, index) => {
+								return (
+									<NavLink key={index} to={item.to}>
+										{item.name}
+									</NavLink>
+								);
 							})}
 						</nav>
 					</SubMenu>
