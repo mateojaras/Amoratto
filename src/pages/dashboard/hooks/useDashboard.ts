@@ -84,7 +84,7 @@ export const useDashboard = () => {
 	};
 
 	const searchByCategory = (categoryId: string) => {
-		getListOfProducts(pagination.start, textFilter, categoryId);
+		getListOfProducts(0, textFilter, categoryId);
 		setCategoryFilter(categoryId);
 	};
 
