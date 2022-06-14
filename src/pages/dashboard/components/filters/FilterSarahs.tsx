@@ -38,8 +38,13 @@ export const FilterSarahs = ({
 							type="radio"
 							checked={checkId === category.id ? true : false}
 							onClick={() => {
-								setCheckId(category.id);
-								searchByCategory(category.id);
+								if (checkId === category.id) {
+									setCheckId("");
+									searchByCategory("");
+								} else {
+									setCheckId(category.id);
+									searchByCategory(category.id);
+								}
 							}}
 							onChange={() => undefined}
 						/>
