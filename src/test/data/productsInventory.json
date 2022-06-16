@@ -1,0 +1,116 @@
+{
+	"metadata": {
+		"total": 759
+	},
+	"data": [
+		{
+			"id": 308,
+			"category": {
+				"id": "5063",
+				"name": "Ventas"
+			},
+			"hasNoIvaDays": false,
+			"name": "Álbum para fotos",
+			"description": null,
+			"reference": null,
+			"status": "active",
+			"itemCategory": {
+				"id": "9",
+				"name": "Cajas y empaques",
+				"description": "",
+				"status": "active"
+			},
+			"price": [
+				{
+					"idPriceList": 1,
+					"name": "General",
+					"type": "amount",
+					"price": "15000.000000",
+					"currency": {
+						"code": "COP",
+						"symbol": "$"
+					}
+				}
+			],
+			"inventory": {
+				"initialQuantity": 1,
+				"initialQuantityDate": "2022-03-08",
+				"unit": "unit",
+				"unitCost": 12000,
+				"availableQuantity": 1,
+				"warehouses": [
+					{
+						"name": "Principal",
+						"observations": null,
+						"isDefault": true,
+						"status": "active",
+						"id": "1",
+						"costCenter": null,
+						"address": null,
+						"initialQuantity": "1.00",
+						"availableQuantity": "1.00",
+						"minQuantity": null,
+						"maxQuantity": null
+					}
+				]
+			},
+			"accounting": {
+				"inventory": {
+					"id": "5023",
+					"idParent": "5002",
+					"name": "Inventarios",
+					"code": null,
+					"description": "",
+					"type": "asset",
+					"readOnly": false,
+					"nature": "debit",
+					"blocked": "no",
+					"categoryRule": {
+						"id": "7",
+						"name": "Inventario",
+						"key": "INVENTORY"
+					}
+				},
+				"inventariablePurchase": {
+					"id": "5071",
+					"idParent": "5070",
+					"name": "Costos del inventario",
+					"code": null,
+					"description": "",
+					"type": "expense",
+					"readOnly": true,
+					"nature": "debit",
+					"blocked": "no",
+					"categoryRule": {
+						"id": "33",
+						"name": "Compras inventariables",
+						"key": "INVENTARIABLE_PURCHASES"
+					}
+				}
+			},
+			"tax": [],
+			"customFields": [
+				{
+					"id": "2",
+					"name": "Categoria Principal",
+					"label": "Categoria Principal",
+					"key": null,
+					"value": "piñateria",
+					"type": "optionsList",
+					"isRequired": true,
+					"status": "active",
+					"options": [
+						"papeleria",
+						"piñateria",
+						"Tortas",
+						"Cacharrería",
+						"Anchetas"
+					]
+				}
+			],
+			"productKey": null,
+			"type": "product",
+			"itemType": null
+		}
+	]
+}
