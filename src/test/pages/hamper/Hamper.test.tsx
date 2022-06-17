@@ -5,18 +5,15 @@ import "@testing-library/jest-dom/extend-expect";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { rest } from "msw";
 import { BrowserRouter } from "react-router-dom";
-import DashBoard from "../../../pages/dashboard/components/DashBoard";
 import { setupServer } from "msw/node";
 
 import productsInventory from "../../data/productsInventory.json";
 import categories from "../../data/categories.json";
+import Hamper from "../../../pages/hamper/components/Hamper";
 
 const server = setupServer(
-	rest.get("/undefineditems", (req, res, ctx) => {
+	rest.get("http://localhost/undefineditems/", (req, res, ctx) => {
 		return res(ctx.json(productsInventory));
-	}),
-	rest.get("http://localhost/undefineditem-categories", (req, res, ctx) => {
-		return res(ctx.json(categories));
 	})
 );
 
@@ -32,7 +29,7 @@ describe("<Header />", () => {
 			// eslint-disable-next-line testing-library/no-render-in-setup
 			render(
 				<BrowserRouter>
-					<DashBoard />
+					<Hamper />
 				</BrowserRouter>
 			);
 		});

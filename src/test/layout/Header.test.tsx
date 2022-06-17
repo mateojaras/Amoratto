@@ -1,3 +1,4 @@
+/* eslint-disable testing-library/no-render-in-setup */
 import React from "react";
 import "@testing-library/jest-dom/extend-expect";
 import { fireEvent, render, screen } from "@testing-library/react";
